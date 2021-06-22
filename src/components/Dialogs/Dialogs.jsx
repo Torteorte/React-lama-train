@@ -3,6 +3,7 @@ import styles from "./Dialogs.module.css";
 import stylesButton from './../common/Buttons.module.css';
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
+import { Redirect } from "react-router";
 
 const Dialogs = (props) => {
 
@@ -20,6 +21,9 @@ const Dialogs = (props) => {
       let message = event.target.value
       props.onSendMessage(message)
    }
+
+   if (!props.isAuth) return <Redirect to="/login" />
+
    return (
       <div className={styles.dialogs}>
          <div className={styles.dialogsItems}>
