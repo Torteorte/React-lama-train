@@ -1,0 +1,114 @@
+.pages span {
+   cursor: pointer;
+   font-size: 18px;
+   padding: 5px
+}
+
+.pageSelected {
+   font-weight: 700;
+   color: white;
+}
+
+.users {
+   margin: 20px;
+   font-size: 16px;
+   color: lightgray;
+   padding-bottom: 15px;
+}
+
+.user {
+   display: flex;
+   flex-direction: row;
+   margin-bottom: 25px;
+}
+
+.leftInformation {
+   width: 90px;
+   height: 75px;
+   padding: 20px;
+}
+
+.leftInformation img {
+   display: block;
+   margin: auto;
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+}
+
+.leftInformation div button {
+   width: 100%;
+   padding: 5px 0;
+   text-align: center;
+   border-radius: 10px;
+   font-size: 16px;
+   /* transition-duration: 0.2s; */
+}
+
+.buttonFollow {
+   background-color: mediumspringgreen;
+}
+
+.buttonFollow:hover {
+   background-color: rgb(0, 182, 112);
+}
+
+.buttonFollow:active {
+   background-color: rgb(5, 214, 134);
+}
+
+.buttonUnFollow {
+   background-color: tomato;
+}
+
+.buttonUnFollow:hover {
+   background-color: rgb(255, 76, 44);
+}
+
+.buttonUnFollow:active {
+   background-color: rgb(255, 43, 6);
+}
+
+.buttonFollow:disabled, .buttonUnFollow:disabled {
+   background-color: lightgray;
+   color: black;
+}
+
+.mainInformation {
+   display: grid;
+   grid-template-columns: 1fr 150px;
+   width: 60%;
+   /* height: 100px; */
+   margin: 10px;
+   padding-left: 10px;
+   border: 1px solid grey;
+   border-radius: 20px;
+   font-size: 18px;
+   color: white;
+}
+
+.nameStatus {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   font-size: 22px;
+   margin-left: 15px;
+}
+
+.nameStatus p:last-child {
+   font-size: 16px;
+   font-style: italic;
+   color: lightgray;
+}
+
+.location {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   margin-right: 20px;
+}
+
+.nameStatus p, .location p {
+   margin-top: auto;
+   margin-bottom: auto;
+}

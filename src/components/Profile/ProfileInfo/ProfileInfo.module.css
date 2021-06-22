@@ -1,0 +1,44 @@
+.mainInfo {
+   margin: 10px 15px;
+   padding: 10px;
+   display: flex;
+   flex-direction: row;
+}
+
+.mainInfo img {
+   display: block;
+   border-radius: 50%;
+   width: 150px;
+   height: 150px;
+}
+
+.personInfo {
+   max-width: 250px;
+   margin-left: 15px;
+   padding: 10px;
+   color: rgb(238, 197, 144);
+   letter-spacing: 1px;
+   font-weight: 700;
+}
+
+.personInfo .aboutMe {
+   margin-bottom: 20px;
+}
+
+.contacts {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contacts img {
+   width: 40px;
+   height: 40px;
+   padding: 5px;
+   margin: 5px;
+}
+
+h2 {
+   margin: 10px 15px;
+   padding: 10px;
+   color: rgb(238, 197, 144);
+}

@@ -1,0 +1,21 @@
+.header {
+    grid-area: h;
+    border-bottom: 1px solid rgb(63, 63, 63);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.header img {
+    width: 40px;
+    margin: auto 0;
+    padding: 5px;
+}
+
+.loginLink {
+    float: right;
+    margin: 20px;
+    color: coral;
+}
+
+.loginLink a {
+    color: white;
+}

@@ -1,0 +1,71 @@
+.dialogs {
+   display: grid;
+   grid-template-columns: 2fr 10fr;
+   margin: 0;
+   padding: 0;
+}
+
+.dialogsItems {
+   background-color: lightgray;
+   padding: 5px;
+}
+
+.dialog {
+   margin: 0;
+   padding: 2px 15px;
+   text-decoration: none;
+   color: black;
+   text-align: right;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.dialog:hover {
+   background-color: darkgrey;
+}
+
+.dialog img {
+   align-self: center;
+   width: 40px;
+   height: 40px;
+   margin: 0;
+}
+
+.messages {
+   padding: 10px;
+   background-color: darkgrey;
+}
+
+.message {
+   padding: 10px;
+   background-color: rgb(211, 226, 231);
+}
+
+.message:nth-child(2n) {
+   background-color: rgb(196, 221, 230);
+}
+
+.sendMessage {
+   width: 250px;
+   margin-top: 20px;
+}
+
+textarea {
+   width: 230px;
+   padding: 10px;
+   resize: none;
+}
+
+.sendMessageButton {
+   display: block;
+   margin: 0;
+   margin-left: auto;
+   border: 1px solid grey;
+   background-color: lightgray;
+   transition-duration: 150ms;
+}
+
+.sendMessageButton:hover {
+   background-color: rgb(167, 167, 167);
+}

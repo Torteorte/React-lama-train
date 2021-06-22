@@ -1,0 +1,21 @@
+.friend {
+   padding: 5px;
+   margin: 5px;
+   font-size: 14px;
+}
+
+img {
+   width: 50px;
+   margin-bottom: 10px;
+}
+
+.friendItem {
+   margin: 0;
+   padding: 0;
+   color: white;
+   text-decoration: none;
+}
+
+.friendItem:hover {
+   color: darksalmon;
+}

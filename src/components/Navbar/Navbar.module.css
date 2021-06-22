@@ -1,0 +1,41 @@
+.nav {
+    grid-area: n;
+    /* box-shadow: 0 5px 20px 2px black; */
+    border: 1px solid rgb(63, 63, 63);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.item a {
+    padding: 15px 20px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.item a.active {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: coral;
+}
+
+.item a:hover {
+    color: coral;
+}
+
+.settings {
+    margin-top: 30px;
+    color: white;
+}
+
+.friends {
+    padding: 5px;
+    color: white;
+    margin-top: 30px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+}
