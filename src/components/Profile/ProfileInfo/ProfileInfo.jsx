@@ -2,6 +2,7 @@ import React from 'react';
 import styles from "./ProfileInfo.module.css";
 import Preloader from './../../common/Preloader';
 import Contacts from './Contacts/Contacts';
+import ProfileStatus from './ProfileStatus';
 
 const ProfileInfo = (props) => {
     if (!props.profile) {
@@ -21,6 +22,7 @@ const ProfileInfo = (props) => {
                 </div>
             </div>
             <h2>{props.profile.fullName}</h2>
+            <ProfileStatus status={"Я будущее аЙтИ"} />
         </div>
     )
 }
