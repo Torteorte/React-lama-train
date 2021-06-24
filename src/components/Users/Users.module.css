@@ -1,6 +1,7 @@
 .pages span {
+   display: inline-block;
    cursor: pointer;
-   font-size: 18px;
+   font-size: 10px;
    padding: 5px
 }
 

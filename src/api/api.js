@@ -1,4 +1,4 @@
-import axios from "axios";
+import * as axios from "axios";
 
 const instance = axios.create({
    withCredentials: true,
@@ -29,8 +29,16 @@ export const authAPI = {
 }
 
 export const profileAPI = {
-   profileUser(userId) {
-      return instance.get(`Profile/${userId}`)
+   getProfile(userId) {
+      return instance.get(`profile/${userId}`)
          .then(respons => respons.data)
+   },
+
+   getStatus(userId) {
+      return instance.get(`profile/status/${userId}`)
+   },
+
+   updateStatus(status) {
+      return instance.put(`profile/status`, { status: status })
    }
 }
