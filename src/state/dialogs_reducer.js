@@ -1,5 +1,4 @@
 const SEND_MESSAGE = "SEND-MESSAGE";
-const UPDATE_NEW_MESSAGE = "UPDATE-NEW-MESSAGE";
 
 let initialState = {
    dialogsData: [
@@ -14,37 +13,24 @@ let initialState = {
       { id: 1, message: "Hi." },
       { id: 2, message: "How are you?" },
       { id: 3, message: "I want eat some russian baby!" }
-   ],
-   newMessageText: ""
+   ]
 }
 
 let reducerMessage = (state = initialState, action) => {
-
-   if (action.type === SEND_MESSAGE) {
-      let newMessage = {
-         id: state.messagesData.length + 1, message: state.newMessageText
-      }
-
-      return { // stateCopy
-         ...state,
-         messagesData: [...state.messagesData, newMessage],
-         newMessageText: ""
-      }
+   switch (action.type) {
+      case SEND_MESSAGE:
+         let newMessage = {
+            id: state.messagesData.length + 1, message: action.newMessageBody
+         }
+         return {
+            ...state,
+            messagesData: [...state.messagesData, newMessage]
+         }
+      default:
+         return state
    }
-   else if (action.type === UPDATE_NEW_MESSAGE) {
-      return {
-         ...state,
-         newMessageText: action.newTextMessage
-      }
-   }
-   return state
 }
 
-export const sendMessageActionCreator = () => ({ type: SEND_MESSAGE })
-
-export const onMessageChangeActionCreator = (message) => ({
-   type: UPDATE_NEW_MESSAGE,
-   newTextMessage: message
-})
+export const sendMessageAC = (newMessageBody) => ({ type: SEND_MESSAGE, newMessageBody })
 
 export default reducerMessage
