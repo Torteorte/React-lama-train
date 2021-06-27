@@ -51,7 +51,7 @@
    margin-top: 20px;
 }
 
-textarea {
+.sendMessage textarea {
    width: 230px;
    padding: 10px;
    resize: none;

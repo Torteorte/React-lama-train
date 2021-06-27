@@ -1,0 +1,44 @@
+.loginPage {
+   margin: 10px;
+   width: 250px;
+   text-align: center;
+}
+
+.loginPage h1 {
+   color: white;
+}
+
+.loginPage form input {
+   margin: 10px;
+   padding: 10px;
+   font-size: 14px;
+   background-color: white;
+   outline: none;
+   border: none;
+}
+
+.loginPage form:first-child input {
+   margin-top: 0px;
+}
+
+.loginPage form input[type="checkbox"] {
+   margin-bottom: 20px;
+}
+
+.loginPage form .checkBox {
+   color: white
+}
+
+.loginPage form button {
+   padding: 5px 20px;
+   font-size: 16px;
+   border-radius: 4px;
+}
+
+.loginPage form button:hover {
+   background-color: lightgrey;
+}
+
+.loginPage form button:active {
+   background-color: darkgrey;
+}

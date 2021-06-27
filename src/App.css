@@ -18,3 +18,7 @@ body {
   grid-area: c;
   background-color: rgba(255, 255, 255, 0.2);
 }
+
+button {
+  border: none;
+}
