@@ -7,10 +7,11 @@ const Header = (props) => {
         <header className={styles.header}>
             <img src="https://upload.wikimedia.org/wikipedia/ru/c/cb/Raspberry_Pi_Logo.svg" alt="main logo" />
             <div className={styles.loginLink}>
-                {props.isAuth ? props.login : <NavLink to={'/login'}>Login</NavLink>}
-
+                {props.isAuth
+                    ? <div className={styles.logOut}> {props.login} <button onClick={props.logout}>Log out</button></div>
+                    : <NavLink to={'/login'}>Login</NavLink>}
             </div>
-        </header>
+        </header >
     )
 }
 
