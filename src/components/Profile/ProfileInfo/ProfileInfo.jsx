@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./ProfileInfo.module.css";
 import Preloader from './../../common/Preloader';
-import Contacts from './Contacts/Contacts';
+// import Contacts from './Contacts/Contacts';
 import ProfileStatus from './ProfileStatus';
 
 const ProfileInfo = (props) => {
@@ -19,8 +19,8 @@ const ProfileInfo = (props) => {
 
                 <div className={styles.personInfo}>
                     <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
-                    {/* <div className={styles.aboutMe}>{props.profile.aboutMe}</div> */}
-                    <Contacts contacts={props.profile.contacts} />
+                    <div className={styles.aboutMe}>{props.profile.aboutMe}</div>
+                    {/* <Contacts contacts={props.profile.contacts} /> */}
                 </div>
             </div>
             <h2>{props.profile.fullName}</h2>
