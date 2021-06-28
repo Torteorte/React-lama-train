@@ -1,9 +1,9 @@
 import React from "react"
 import styles from "./Users.module.css";
-import stylesButton from './../common/Buttons.module.css';
 import userDefaultPhoto from '../../assets/img/defaultPhoto.jpg'
 import { NavLink } from 'react-router-dom';
 import { UserAPI } from "../../api/api";
+import ButtonGreen from "../common/ButtonGreen/ButtonGreen";
 
 const Users = (props) => {
 
@@ -44,7 +44,7 @@ const Users = (props) => {
                                  props.toggleFollowingProgress(false, users.id)
                               })
                         }}>Unfollow</button>
-                        : <button className={stylesButton.buttonGreen} disabled={props.followingProgress.some(id => id === users.id)} onClick={() => {
+                        : <ButtonGreen textButton="Follow" post disabled={props.followingProgress.some(id => id === users.id)} onClick={() => {
                            props.toggleFollowingProgress(true, users.id)
                            UserAPI.followUser(users.id)
                               .then(response => {
@@ -53,7 +53,7 @@ const Users = (props) => {
                                  }
                                  props.toggleFollowingProgress(false, users.id)
                               })
-                        }}>Follow</button>
+                        }}></ButtonGreen>
                      }
                   </div>
                </div>

@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./Dialogs.module.css";
-import stylesButton from './../common/Buttons.module.css';
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import { Redirect } from "react-router";
 import { Field, reduxForm } from 'redux-form'
 import { maxLengthCreator, required } from "../../Validators/validators";
 import { TextArea } from "../common/FormControls/FormsControl";
+import ButtonGreen from "../common/ButtonGreen/ButtonGreen";
 
 const Dialogs = (props) => {
 
@@ -48,7 +48,8 @@ const AddMessageForm = (props) => {
                value={props.newMessageText}
                placeholder="Enter your message"
                validate={[required, maxLength50]} />
-            <button className={stylesButton.buttonGreen}>Send</button>
+            <ButtonGreen textButton="Send" />
+
          </form>
       </div>
    )

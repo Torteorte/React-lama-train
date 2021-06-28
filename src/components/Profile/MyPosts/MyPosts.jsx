@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from "./MyPosts.module.css";
-import stylesButton from './../../common/Buttons.module.css';
 import Post from './Post/Post';
 import { Field, reduxForm } from 'redux-form'
 import { maxLengthCreator, required } from '../../../Validators/validators';
 import { TextArea } from '../../common/FormControls/FormsControl';
+import ButtonGreen from '../../common/ButtonGreen/ButtonGreen';
 
 
 const MyPosts = (props) => {
@@ -42,10 +42,7 @@ const MyPostsForm = (props) => {
                         value={props.newPostText}
                         validate={[required, maxLength10]} />
                 </div>
-                <div>
-                    <button className={stylesButton.buttonGreen} >Add post</button>
-                    {/* <button className={styles.clearButton}>Clear</button> */}
-                </div>
+                <ButtonGreen textButton="Add post" />
             </form>
         </div>
     )
