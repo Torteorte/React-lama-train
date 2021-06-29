@@ -46,7 +46,7 @@
    /* transition-duration: 0.2s; */
 }
 
-/* .buttonFollow {
+.buttonFollow {
    background-color: mediumspringgreen;
 }
 
@@ -56,7 +56,7 @@
 
 .buttonFollow:active {
    background-color: rgb(5, 214, 134);
-} */
+}
 
 .buttonUnFollow {
    background-color: tomato;
