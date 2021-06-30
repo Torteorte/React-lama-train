@@ -2,7 +2,6 @@ import React from 'react';
 import styles from "./ProfileInfo.module.css";
 import Preloader from './../../common/Preloader';
 // import Contacts from './Contacts/Contacts';
-// import ProfileStatus from './ProfileStatus';
 import ProfileStatusHook from './ProfileStatusHook';
 
 const ProfileInfo = (props) => {
