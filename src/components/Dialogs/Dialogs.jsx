@@ -4,7 +4,7 @@ import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import { Redirect } from "react-router";
 import { Field, reduxForm } from 'redux-form'
-import { maxLengthCreator, required } from "../../Validators/validators";
+import { maxLengthCreator, requiredWriteSomething } from "../../Validators/validators";
 import { TextArea } from "../common/FormControls/FormsControl";
 import ButtonGreen from "../common/ButtonGreen/ButtonGreen";
 
@@ -47,7 +47,7 @@ const AddMessageForm = (props) => {
                name="newMessageBody"
                value={props.newMessageText}
                placeholder="Enter your message"
-               validate={[required, maxLength50]} />
+               validate={[requiredWriteSomething, maxLength50]} />
             <ButtonGreen textButton="Send" />
 
          </form>
