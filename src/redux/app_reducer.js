@@ -32,7 +32,6 @@ export const initializedApp = () => (dispatch) => {
       .then(() => {
          dispatch(initializedSuccses())
       })
-
 }
 
 export default appReducer

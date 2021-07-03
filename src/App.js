@@ -12,7 +12,7 @@ import UsersContainer from './components/Users/UsersContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
 import Login from './components/Login/Login';
 import { connect } from 'react-redux';
-import { initializedApp } from './state/app_reducer';
+import { initializedApp } from './redux/app_reducer';
 import Preloader from './components/common/Preloader';
 
 class App extends React.Component {

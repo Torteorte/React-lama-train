@@ -2,8 +2,6 @@ import React from "react"
 import styles from "./Users.module.css";
 import userDefaultPhoto from '../../assets/img/defaultPhoto.jpg'
 import { NavLink } from 'react-router-dom';
-import { UserAPI } from "../../api/api";
-// import ButtonGreen from "../common/ButtonGreen/ButtonGreen";
 
 const Users = (props) => {
 
@@ -34,26 +32,12 @@ const Users = (props) => {
                   </NavLink>
                   <div className={styles.follow}>
                      {users.followed
-                        ? <button className={styles.buttonUnFollow} disabled={props.followingProgress.some(id => id === users.id)} onClick={() => {
-                           props.toggleFollowingProgress(true, users.id)
-                           UserAPI.unFollowUser(users.id)
-                              .then(response => {
-                                 if (response.data.resultCode === 0) {
-                                    props.unFollow(users.id)
-                                 }
-                                 props.toggleFollowingProgress(false, users.id)
-                              })
-                        }}>Unfollow</button>
-                        : <button className={styles.buttonFollow} post disabled={props.followingProgress.some(id => id === users.id)} onClick={() => {
-                           props.toggleFollowingProgress(true, users.id)
-                           UserAPI.followUser(users.id)
-                              .then(response => {
-                                 if (response.data.resultCode === 0) {
-                                    props.follow(users.id)
-                                 }
-                                 props.toggleFollowingProgress(false, users.id)
-                              })
-                        }}>Follow</button>
+                        ? <button className={styles.buttonUnFollow} disabled={props.followingProgress.some(userId => userId === users.id)} onClick={() => { props.unFollow(users.id) }}>
+                           Unfollow
+                        </button>
+                        : <button className={styles.buttonFollow} post disabled={props.followingProgress.some(userId => userId === users.id)} onClick={() => { props.follow(users.id) }}>
+                           Follow
+                        </button>
                      }
                   </div>
                </div>

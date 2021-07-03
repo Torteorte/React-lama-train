@@ -7,7 +7,6 @@ import authReducer from "./auth_reducer";
 import thunkMiddleware from "redux-thunk";
 import { reducer as formReducer } from 'redux-form'
 import appReducer from "./app_reducer";
-// import { Formik } from 'formik';
 
 let reducers = combineReducers({
    dialogsPage: reducerMessage,

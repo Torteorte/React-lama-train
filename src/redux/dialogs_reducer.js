@@ -18,6 +18,7 @@ let initialState = {
 
 let reducerMessage = (state = initialState, action) => {
    switch (action.type) {
+
       case SEND_MESSAGE:
          let newMessage = {
             id: state.messagesData.length + 1, message: action.newMessageBody
@@ -26,6 +27,7 @@ let reducerMessage = (state = initialState, action) => {
             ...state,
             messagesData: [...state.messagesData, newMessage]
          }
+
       default:
          return state
    }
