@@ -13,15 +13,15 @@ let mapStateToProps = (state) => {
    }
 }
 
-let mapDispatchToProps = (dispatch) => {
-   return {
-      sendMessage: (newMessageBody) => {
-         dispatch(sendMessageAC(newMessageBody))
-      }
-   }
-}
+// let mapDispatchToProps = (dispatch) => {
+//    return {
+//       sendMessage: (newMessageBody) => {
+//          dispatch(sendMessageAC(newMessageBody))
+//       }
+//    }
+// }
 
 export default compose(
    withAuthRedirect,
-   connect(mapStateToProps, mapDispatchToProps)
+   connect(mapStateToProps, { sendMessageAC })
 )(Dialogs)

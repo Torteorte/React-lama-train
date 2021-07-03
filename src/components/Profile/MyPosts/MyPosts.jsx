@@ -13,7 +13,7 @@ const MyPosts = (props) => {
         .map(post => <Post message={post.message} likesCounts={post.likesCounts} id={post.id} key={post.id} />)
 
     let addNewPost = (values) => {
-        props.addPostAC(values.newPostBody)
+        props.addPostAC(values.newPostText)
     }
 
     return (
@@ -38,7 +38,7 @@ const MyPostsForm = (props) => {
                 <div>
                     <Field
                         component={TextArea}
-                        name="newPostBody"
+                        name="newPostText"
                         value={props.newPostText}
                         validate={[requiredWriteSomething, maxLength10]} />
                 </div>

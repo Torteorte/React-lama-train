@@ -17,7 +17,7 @@ const Dialogs = (props) => {
       .map(mes => <Message message={mes.message} id={mes.id} key={mes.id} />)
 
    let addNewMessage = (values) => {
-      props.sendMessage(values.newMessageBody)
+      props.sendMessageAC(values.newMessageText)
    }
 
    if (!props.isAuth) return <Redirect to="/login" />
@@ -44,7 +44,7 @@ const AddMessageForm = (props) => {
          <form action="" onSubmit={props.handleSubmit}>
             <Field
                component={TextArea}
-               name="newMessageBody"
+               name="newMessageText"
                value={props.newMessageText}
                placeholder="Enter your message"
                validate={[requiredWriteSomething, maxLength50]} />
