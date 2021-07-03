@@ -1,0 +1,11 @@
+.pages span {
+   display: inline-block;
+   cursor: pointer;
+   font-size: 10px;
+   padding: 5px
+}
+
+.pageSelected {
+   font-weight: 700;
+   color: white;
+}
