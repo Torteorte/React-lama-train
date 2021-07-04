@@ -15,6 +15,9 @@ import { connect } from 'react-redux';
 import { initializedApp } from './redux/app_reducer';
 import Preloader from './components/common/Preloader';
 
+import store from './redux/redux_store'
+import { Provider } from 'react-redux';
+
 class App extends React.Component {
 
   componentDidMount() {
@@ -51,4 +54,16 @@ let mapStateToProps = (state) => ({
   initialized: state.app.initialized
 })
 
-export default connect(mapStateToProps, { initializedApp })(App)
+// export default connect(mapStateToProps, { initializedApp })(App)
+
+let AppContainer = connect(mapStateToProps, { initializedApp })(App)
+
+let LamaJsApp = (props) => {
+  return (
+    <Provider store={store}>
+      <AppContainer />
+    </Provider>
+  )
+}
+
+export default LamaJsApp
