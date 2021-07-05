@@ -5,7 +5,7 @@ import NavbarContainer from './components/Navbar/NavbarContainer';
 import Preloader from './components/common/Preloader';
 import store from './redux/redux_store'
 import { Route } from 'react-router';
-import { BrowserRouter, Switch } from 'react-router-dom';
+import { HashRouter, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { initializedApp } from './redux/app_reducer';
 import { Provider } from 'react-redux';
@@ -30,7 +30,7 @@ class App extends React.Component {
     }
 
     return (
-      <BrowserRouter>
+      <HashRouter >
         <div className="app-wrapper">
           <HeaderContainer />
           <NavbarContainer />
@@ -48,7 +48,7 @@ class App extends React.Component {
             </Suspense>
           </div>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
