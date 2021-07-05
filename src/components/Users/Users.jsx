@@ -1,13 +1,13 @@
 import React from "react"
 import styles from "./Users.module.css";
-import CountPages from "./CountPages/CountPages";
 import User from "./User/User";
+import Paginator from "../common/Pagination/Paginator";
 
 const Users = (props) => {
 
    return <div className={styles.users}>
 
-      <CountPages
+      <Paginator
          currentPage={props.currentPage}
          totalUsers={props.totalUsers}
          pageSize={props.pageSize}
