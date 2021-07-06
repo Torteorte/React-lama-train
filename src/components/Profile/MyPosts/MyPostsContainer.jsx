@@ -10,14 +10,6 @@ let mapStateToProps = (state) => {
    }
 }
 
-// let mapDispatchToProps = (dispatch) => {
-//    return {
-//       addPost: (newPostBody) => {
-//          dispatch(addPostAC(newPostBody))
-//       }
-//    }
-// }
-
 const MyPostsContainer = connect(mapStateToProps, { addPostAC })(MyPosts)
 
 export default MyPostsContainer
