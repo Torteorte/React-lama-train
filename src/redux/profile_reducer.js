@@ -88,6 +88,15 @@ export const savePhotoAC = (file) => async (dispatch) => {
    }
 }
 
+export const saveProfile = (profile) => async (dispatch, getState) => {
+   const userId = getState().auth.id
+   const response = await profileAPI.saveProfile(profile);
+
+   if (response.data.resultCode === 0) {
+      dispatch(getUserProfile(userId))
+   }
+}
+
 export const deletePost = (userId) => ({ type: DELETE_POST, userId })
 
 export default reducerPost
