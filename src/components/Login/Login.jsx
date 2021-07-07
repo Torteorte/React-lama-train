@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Field, reduxForm } from 'redux-form'
 import { login } from '../../redux/auth_reducer'
 import { required } from '../../Validators/validators'
-import { Input } from '../common/FormControls/FormsControl'
+import { createField, Input } from '../common/FormControls/FormsControl'
 import { Redirect } from "react-router";
 import styles from './Login.module.css'
 
@@ -11,20 +11,10 @@ const LoginForm = ({ handleSubmit, error }) => {
    return (
       <form action="" onSubmit={handleSubmit}>
          <div>
-            <Field
-               component={Input}
-               name={"Email"}
-               type={"text"}
-               placeholder={"Email"}
-               validate={[required]} />
+            {createField(Input, "Email", "text", "Email", [required])}
          </div>
          <div>
-            <Field
-               component={Input}
-               name={"Password"}
-               type={"password"}
-               placeholder={"Password"}
-               validate={[required]} />
+            {createField(Input, "Password", "password", "Password", [required])}
          </div>
          <div>
             <Field

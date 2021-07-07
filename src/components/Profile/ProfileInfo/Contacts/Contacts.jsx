@@ -8,13 +8,17 @@ import styles from "./../ProfileInfo.module.css";
 
 const Contacts = (props) => {
 
+   let isContact = (propsSocial, social) => {
+      return (propsSocial && <a href={propsSocial} > <img src={social} alt={`${social}-link`} /></a >)
+   }
+
    return <div className={styles.contacts}>
-      <a href={props.contacts.facebook} > <img src={facebook} alt="facebook-link" /></a >
-      <a href={props.contacts.vk}><img src={vk} alt="vk-link" /></a>
-      <a href={props.contacts.twitter}><img src={twitter} alt="twitter-link" /></a>
-      <a href={props.contacts.instagram}><img src={instagram} alt="instagram-link" /></a>
-      <a href={props.contacts.youtube}><img src={youtube} alt="youtube-link" /></a>
-      <a href={props.contacts.github}><img src={github} alt="github-link" /></a>
+      {isContact(props.contacts.facebook, facebook)}
+      {isContact(props.contacts.vk, vk)}
+      {isContact(props.contacts.twitter, twitter)}
+      {isContact(props.contacts.instagram, instagram)}
+      {isContact(props.contacts.youtube, youtube)}
+      {isContact(props.contacts.github, github)}
    </div>
 }
 

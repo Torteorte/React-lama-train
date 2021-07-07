@@ -12,8 +12,8 @@
    height: 150px;
 }
 
-.personInfo {
-   width: 250px;
+.personInfo, .status {
+   max-width: 500px;
    margin-left: 15px;
    padding: 10px;
    color: rgb(238, 197, 144);
@@ -26,6 +26,7 @@
 }
 
 .contacts {
+   width: 250px;
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
 }
@@ -61,4 +62,8 @@ h2 {
    font-size: 18px;
    border-radius: 5px;
    border: 0 black;
+}
+
+.personInfo div, .personInfo b {
+   padding: 10px;
 }
