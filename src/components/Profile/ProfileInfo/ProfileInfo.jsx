@@ -21,8 +21,11 @@ const ProfileInfo = (props) => {
     }
 
     const onSubmit = (formData) => {
-        props.saveProfile(formData);
-        setEditMode(false)
+        props.saveProfile(formData).then(
+            () => {
+                setEditMode(false);
+            }
+        );
     }
 
     return (
@@ -58,18 +61,20 @@ const ProfileData = (props) => {
                 {props.profile.aboutMe}
             </div>
             <div>
-                <b>Looking for a job:</b> {props.lookingForAJob ? "yes" : "no"}
+                <b>Looking for a job:</b> {props.profile.lookingForAJob ? "yes" : "no"}
             </div>
             {props.profile.lookingForAJob &&
                 <div>
                     <b>My professional skills:</b> {props.profile.lookingForAJobDescription}
                 </div>
             }
-            <Contacts contacts={props.profile.contacts} />
+            <div>
+                <b>Contacts:</b>
+                <Contacts contacts={props.profile.contacts} />
+            </div>
+
         </div>
     )
 }
-
-
 
 export default ProfileInfo

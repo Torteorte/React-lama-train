@@ -9,7 +9,7 @@ import styles from "./../ProfileInfo.module.css";
 const Contacts = (props) => {
 
    let isContact = (propsSocial, social) => {
-      return (propsSocial && <a href={propsSocial} > <img src={social} alt={`${social}-link`} /></a >)
+      return (propsSocial && <a target="_blank" rel="noreferrer" href={propsSocial} > <img src={social} alt={`${social}-link`} /></a >)
    }
 
    return <div className={styles.contacts}>

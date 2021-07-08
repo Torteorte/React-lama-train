@@ -1,4 +1,5 @@
 import { profileAPI } from "../api/api";
+import { stopSubmit } from "redux-form";
 
 const ADD_POST = "ADD-POST";
 const SET_USER_PROFILE = "SET-USER-PROFILE"
@@ -94,6 +95,16 @@ export const saveProfile = (profile) => async (dispatch, getState) => {
 
    if (response.data.resultCode === 0) {
       dispatch(getUserProfile(userId))
+   } else {
+      let wrongNetwork = response.data.messages[0]
+         .slice(
+            response.data.messages[0].indexOf(">") + 1,
+            response.data.messages[0].indexOf(")")
+         )
+         .toLocaleLowerCase();
+      dispatch(stopSubmit("editProfile", { contacts: { [wrongNetwork]: `Invalid URL of ${wrongNetwork}` } })
+      );
+      return Promise.reject(response.data.messages[0]);
    }
 }
 

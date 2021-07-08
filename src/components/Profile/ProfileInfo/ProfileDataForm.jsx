@@ -7,6 +7,10 @@ const ProfileDataForm = (props) => {
    return (
       <form action="" onSubmit={props.handleSubmit}>
          <div><button>Save</button></div>
+         {props.error && <div>
+            {props.error}
+         </div>
+         }
          <div>
             {createField(Input, "fullName", "text", "Full Name")}
          </div>
@@ -25,6 +29,14 @@ const ProfileDataForm = (props) => {
 
          <div>
             <b>My professional skills:</b> {createField(TextArea, "lookingForAJobDescription", "text", "My Skills")}
+         </div>
+         <div>
+            <b>Contacts:</b>
+            {Object.keys(props.profile.contacts).map(key => {
+               return <div key={key}>
+                  <b>{key}: {createField(Input, "contacts." + key.toLocaleLowerCase(), key)}</b>
+               </div>
+            })}
          </div>
       </form>
    )
