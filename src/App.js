@@ -4,7 +4,7 @@ import HeaderContainer from './components/Header/HeaderContainer';
 import NavbarContainer from './components/Navbar/NavbarContainer';
 import Preloader from './components/common/Preloader';
 import store from './redux/redux_store'
-import { Route } from 'react-router';
+import { Redirect, Route } from 'react-router';
 import { HashRouter, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { initializedApp } from './redux/app_reducer';
@@ -38,12 +38,14 @@ class App extends React.Component {
             <Suspense fallback={<div>Загрузка...</div>}>
               <Switch>
                 <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
+                <Route exact path='/' render={() => <Redirect from="/" to="/profile" />} />
                 <Route path='/dialogs' render={() => <DialogsContainer />} />
                 <Route path='/users' render={() => <UsersContainer />} />
                 <Route path='/news' render={() => <News />} />
                 <Route path='/music' render={() => <Music />} />
                 <Route path='/settings' render={() => <Settings />} />
                 <Route path='/login' render={() => <Login />} />
+                <Route path='*' render={() => <div>I DON'T KNOW THIS PAGE</div>} />
               </Switch>
             </Suspense>
           </div>
@@ -57,7 +59,7 @@ let mapStateToProps = (state) => ({
   initialized: state.app.initialized
 })
 
-// export default connect(mapStateToProps, { initializedApp })(App)
+// export default connect(mapStateToProps, {initializedApp})(App)
 
 let AppContainer = connect(mapStateToProps, { initializedApp })(App)
 

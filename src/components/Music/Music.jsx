@@ -4,7 +4,7 @@ import styles from "./Music.module.css";
 const Music = () => {
    return (
       <div className={styles.content}>
-         Music
+         Music next season
       </div>
    )
 }

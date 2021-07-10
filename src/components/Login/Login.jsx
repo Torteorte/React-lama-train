@@ -26,7 +26,7 @@ const LoginForm = ({ handleSubmit, error, captchaUrl }) => {
          {captchaUrl && <img src={captchaUrl} alt={"captcha"} />}
          {captchaUrl && createField(Input, "captcha", "text", "Enter Symbols", [required])}
 
-         {error && <div>
+         {error && <div className={styles.error} >
             {error}
          </div>}
          <div>

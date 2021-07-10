@@ -4,7 +4,7 @@ import styles from "./Settings.module.css";
 const Settings = () => {
    return (
       <div className={styles.content}>
-         Settings
+         Settings next season
       </div>
    )
 }

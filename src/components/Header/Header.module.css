@@ -1,19 +1,36 @@
 .header {
+    display: grid;
     grid-area: h;
+    grid-template-columns: 5fr 1fr;
     border-bottom: 1px solid rgb(63, 63, 63);
     background-color: rgba(255, 255, 255, 0.05);
+    font-size: 20px;
+}
+
+.leftPart {
+    display: flex;
+    flex-direction: row;
 }
 
 .header img {
-    width: 40px;
-    margin: auto 0;
+    width: 55px;
+    margin: auto 10px;
     padding: 5px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+.heading {
+    margin: auto 10px;
+    color: gold;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Caveat', cursive;
+}
+
 .loginLink {
-    float: right;
     margin: 20px;
-    color: coral;
+    margin-left: auto;
+    color: lightgray;
 }
 
 .loginLink a {
@@ -21,8 +38,8 @@
 }
 
 .logOut {
-    float: right;
     margin: 0;
+    margin-left: auto;
     padding: 0;
 }
 
@@ -30,5 +47,10 @@
     margin: 0;
     margin-top: -5px;
     padding: 5px 10px;
-    border-radius: 2px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.loginLink div button:hover {
+    background-color: rgb(200, 200, 200);
 }
