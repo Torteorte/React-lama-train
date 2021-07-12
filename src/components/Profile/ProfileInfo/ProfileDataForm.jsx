@@ -2,11 +2,11 @@ import React from 'react';
 import styles from "./ProfileInfo.module.css";
 import { createField, Input, TextArea } from '../../common/FormControls/FormsControl';
 import { Field, reduxForm } from 'redux-form'
+import ButtonGrey from './../../common/ButtonGrey/ButtonGrey'
 
 const ProfileDataForm = (props) => {
    return (
       <form action="" onSubmit={props.handleSubmit}>
-         <div><button>Save</button></div>
          {props.error && <div>
             {props.error}
          </div>
@@ -38,6 +38,7 @@ const ProfileDataForm = (props) => {
                </div>
             })}
          </div>
+         <div><ButtonGrey textButton="Save" /></div>
       </form>
    )
 }

@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
 import styles from "./ProfileInfo.module.css";
-import Preloader from './../../common/Preloader';
+import Preloader from './../../common/Preloader/Preloader';
 import Contacts from './Contacts/Contacts';
-import ProfileStatusHook from './ProfileStatusHook';
+import ProfileStatusHook from './ProfileStatusHook/ProfileStatusHook';
 import userDefaultPhoto from '../../../assets/img/defaultPhoto.jpg'
 import ProfileDataForm from './ProfileDataForm';
+import ButtonGrey from '../../common/ButtonGrey/ButtonGrey';
 
 const ProfileInfo = (props) => {
 
     let [editMode, setEditMode] = useState(false)
 
     if (!props.profile) {
-        return <Preloader />
+        return (
+            <div className={styles.preloaderProfile}>
+                <Preloader />
+            </div>
+        )
     }
 
     let onChangeMainFoto = (e) => {
@@ -30,12 +35,16 @@ const ProfileInfo = (props) => {
 
     return (
         <div>
-            <div>
+            <div className={styles.fotoLarge}>
                 <img src="https://city.diia.gov.ua/assets/img/pages/city.jpg" alt="big background foto" />
+                <div className={styles.avatar}>
+                    <img src={props.profile.photos.large || userDefaultPhoto} alt="avatar-foto" />
+                </div>
+
             </div>
             <div className={styles.mainInfo}>
-                <img src={props.profile.photos.large || userDefaultPhoto} alt="avatar-foto" />
-                <div className={styles.status}>
+                <div className={styles.NameStatus}>
+                    <h1>{props.profile.fullName}</h1>
                     <ProfileStatusHook status={props.status} updateStatus={props.updateStatus} isOwner={props.isOwner} />
                 </div>
             </div>
@@ -52,10 +61,7 @@ const ProfileInfo = (props) => {
 const ProfileData = (props) => {
     return (
         <div className={styles.personInfo}>
-            {props.isOwner && <div><button onClick={props.goToEditMode}>edit</button></div>}
-            <div>
-                <h2>{props.profile.fullName}</h2>
-            </div>
+
             <b>About me: </b>
             <div className={styles.aboutMe}>
                 {props.profile.aboutMe}
@@ -72,7 +78,7 @@ const ProfileData = (props) => {
                 <b>Contacts:</b>
                 <Contacts contacts={props.profile.contacts} />
             </div>
-
+            {props.isOwner && <div className={styles.Edit}><ButtonGrey onClick={props.goToEditMode} textButton="Edit" /></div>}
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import { getAuthUserData } from "./auth_reducer";
 
-const INITIALIZED_SUCCSES = "INITIALIZED_SUCCSES";
+const INITIALIZED_SUCCSES = "lama/app/INITIALIZED_SUCCSES";
 
 let initialState = {
    initialized: false

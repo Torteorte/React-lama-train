@@ -1,11 +1,11 @@
 import { profileAPI } from "../api/api";
 import { stopSubmit } from "redux-form";
 
-const ADD_POST = "ADD-POST";
-const SET_USER_PROFILE = "SET-USER-PROFILE"
-const SET_STATUS = "SET_STATUS"
-const DELETE_POST = "DELETE_POST"
-const SAVE_PHOTO_SUCCESS = "SAVE_PHOTO_SUCCESS"
+const ADD_POST = "lama/profile/ADD-POST";
+const SET_USER_PROFILE = "lama/profile/SET-USER-PROFILE"
+const SET_STATUS = "lama/profile/SET_STATUS"
+const DELETE_POST = "lama/profile/DELETE_POST"
+const SAVE_PHOTO_SUCCESS = "lama/profile/SAVE_PHOTO_SUCCESS"
 
 let initialState = {
    postsData: [

@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import './App.css';
 import HeaderContainer from './components/Header/HeaderContainer';
 import NavbarContainer from './components/Navbar/NavbarContainer';
-import Preloader from './components/common/Preloader';
+import Preloader from './components/common/Preloader/Preloader';
 import store from './redux/redux_store'
 import { Redirect, Route } from 'react-router';
 import { HashRouter, Switch } from 'react-router-dom';
@@ -35,7 +35,7 @@ class App extends React.Component {
           <HeaderContainer />
           <NavbarContainer />
           <div className="app-wrapper-content">
-            <Suspense fallback={<div>Загрузка...</div>}>
+            <Suspense fallback={<div className="loading">Загрузка...</div>}>
               <Switch>
                 <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
                 <Route exact path='/' render={() => <Redirect from="/" to="/profile" />} />

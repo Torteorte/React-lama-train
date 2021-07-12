@@ -1,12 +1,12 @@
 import { UserAPI } from "../api/api";
 
-const FOLLOW = "FOLLOW";
-const UNFOLLOW = "UNFOLLOW";
-const SET_USERS = "SET-USERS";
-const SET_CURRENT_PAGE = "SET-CURRENT-PAGE";
-const SET_TOTAL_USERS_COUNT = "SET-TOTAL-USERS-COUNT";
-const TOGGLE_IS_FETCHING = "TOGGLE-IS-FETCHING";
-const TOGGLE_IS_FOLLOWING_PROGRESS = "TOGGLE_IS_FOLLOWING_PROGRESS";
+const FOLLOW = "lama/usrers/FOLLOW";
+const UNFOLLOW = "lama/usrers/UNFOLLOW";
+const SET_USERS = "lama/usrers/SET-USERS";
+const SET_CURRENT_PAGE = "lama/usrers/SET-CURRENT-PAGE";
+const SET_TOTAL_USERS_COUNT = "lama/usrers/SET-TOTAL-USERS-COUNT";
+const TOGGLE_IS_FETCHING = "lama/usrers/TOGGLE-IS-FETCHING";
+const TOGGLE_IS_FOLLOWING_PROGRESS = "lama/usrers/TOGGLE_IS_FOLLOWING_PROGRESS";
 
 let initialState = {
    usersData: [],

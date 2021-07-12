@@ -2,8 +2,20 @@ import React from 'react';
 import styles from './Header.module.css';
 import { NavLink } from 'react-router-dom';
 import lama from './../../assets/img/llama.svg'
+import ButtonGrey from '../common/ButtonGrey/ButtonGrey';
+import userDefaultPhoto from './../../assets/img/defaultPhoto.jpg'
+import Preloader from '../common/Preloader/Preloader';
 
 const Header = (props) => {
+
+    if (!props.profile) {
+        return (
+            <div className={styles.preloaderProfile}>
+                <Preloader />
+            </div>
+        )
+    }
+
     return (
         <header className={styles.header}>
             <div className={styles.leftPart}>
@@ -12,7 +24,7 @@ const Header = (props) => {
             </div>
             <div className={styles.loginLink}>
                 {props.isAuth
-                    ? <div className={styles.logOut}> {props.login} <button onClick={props.logout}>Log out</button></div>
+                    ? <div className={styles.logOut}> <span><img src={props.profile.photos.large || userDefaultPhoto} alt="Avatar" /></span>  {props.login} <ButtonGrey onClick={props.logout} textButton="Log out" /></div>
                     : <NavLink to={'/login'}>Login</NavLink>}
             </div>
         </header >

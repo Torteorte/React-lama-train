@@ -4,7 +4,7 @@ import twitter from './../../../../assets/img/twitter.svg'
 import instagram from './../../../../assets/img/instagram.svg'
 import youtube from './../../../../assets/img/youtube.svg'
 import github from './../../../../assets/img/github.svg'
-import styles from "./../ProfileInfo.module.css";
+import styles from "./Contacts.module.css";
 
 const Contacts = (props) => {
 

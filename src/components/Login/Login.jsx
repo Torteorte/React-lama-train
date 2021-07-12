@@ -6,6 +6,7 @@ import { required } from '../../Validators/validators'
 import { createField, Input } from '../common/FormControls/FormsControl'
 import { Redirect } from "react-router";
 import styles from './Login.module.css'
+import ButtonGrey from '../common/ButtonGrey/ButtonGrey'
 
 const LoginForm = ({ handleSubmit, error, captchaUrl }) => {
    return (
@@ -30,7 +31,7 @@ const LoginForm = ({ handleSubmit, error, captchaUrl }) => {
             {error}
          </div>}
          <div>
-            <button>Login</button>
+            <ButtonGrey textButton="Login" />
          </div>
       </form>
    )

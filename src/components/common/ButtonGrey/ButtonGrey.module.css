@@ -1,0 +1,19 @@
+.buttonGrey {
+   margin: 0;
+   padding: 5px 10px;
+   border: none;
+   border-radius: 5px;
+   font-size: 14px;
+}
+
+.buttonGrey {
+   background-color: rgb(211, 211, 211);
+}
+
+.buttonGrey:hover {
+   background-color: darkgrey;
+}
+
+.buttonGrey:active {
+   background-color: rgb(117, 117, 117);
+}

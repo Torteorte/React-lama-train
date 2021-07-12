@@ -30,6 +30,10 @@
    margin-bottom: 20px;
 }
 
+.loginPage input:focus {
+   background-color: rgb(217, 255, 182);
+}
+
 .loginPage form .checkBox {
    color: white
 }
@@ -38,18 +42,6 @@
    padding: 5px 20px;
    font-size: 16px;
    border-radius: 4px;
-}
-
-.loginPage form button:hover {
-   background-color: lightgrey;
-}
-
-.loginPage form button:active {
-   background-color: darkgrey;
-}
-
-.loginPage input:focus {
-   background-color: rgb(217, 255, 182);
 }
 
 .error {

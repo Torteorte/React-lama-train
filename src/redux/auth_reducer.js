@@ -1,8 +1,8 @@
 import { stopSubmit } from "redux-form";
 import { authAPI, securityAPI } from "../api/api";
 
-const SET_USER_DATA = "SET_USER_DATA";
-const GET_CAPTCHA_URL = "GET_CAPTCHA_URL"
+const SET_USER_DATA = "lama/auth/SET_USER_DATA";
+const GET_CAPTCHA_URL = "lama/auth/GET_CAPTCHA_URL"
 
 let initialState = {
    id: null,

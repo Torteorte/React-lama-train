@@ -1,4 +1,4 @@
-import preloader from './../../assets/img/circles.svg'
+import preloader from './../../../assets/img/circles.svg'
 import styles from "./Preloader.module.css";
 
 const Preloader = () => {
