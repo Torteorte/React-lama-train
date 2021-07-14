@@ -24,7 +24,13 @@ const Header = (props) => {
             </div>
             <div className={styles.loginLink}>
                 {props.isAuth
-                    ? <div className={styles.logOut}> <span><img src={props.profile.photos.large || userDefaultPhoto} alt="Avatar" /></span>  {props.login} <ButtonGrey onClick={props.logout} textButton="Log out" /></div>
+                    ? <div className={styles.logOut}>
+                        <div className={styles.loginSmallInfo}>
+                            <img src={props.profile.photos.large || userDefaultPhoto} alt="Avatar" />
+                            <div>{props.login}</div>
+                        </div>
+                        <ButtonGrey onClick={props.logout} textButton="Log out" />
+                    </div>
                     : <NavLink to={'/login'}>Login</NavLink>}
             </div>
         </header >

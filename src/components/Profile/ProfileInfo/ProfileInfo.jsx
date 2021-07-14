@@ -6,6 +6,7 @@ import ProfileStatusHook from './ProfileStatusHook/ProfileStatusHook';
 import userDefaultPhoto from '../../../assets/img/defaultPhoto.jpg'
 import ProfileDataForm from './ProfileDataForm';
 import ButtonGrey from '../../common/ButtonGrey/ButtonGrey';
+import uploadImage from './../../../assets/img/photo-camera.svg'
 
 const ProfileInfo = (props) => {
 
@@ -40,16 +41,20 @@ const ProfileInfo = (props) => {
                 <div className={styles.avatar}>
                     <img src={props.profile.photos.large || userDefaultPhoto} alt="avatar-foto" />
                 </div>
-
+                <div >
+                    {props.isOwner && <div>
+                        <input className={styles.inputAvatar} type={"file"} name={"myfile"} onChange={onChangeMainFoto} id="avatarFile" />
+                        <label for="avatarFile" className={styles.avatarFileInput}>
+                            <img src={uploadImage} alt="avatar" />
+                        </label>
+                    </div>}
+                </div>
             </div>
             <div className={styles.mainInfo}>
                 <div className={styles.NameStatus}>
                     <h1>{props.profile.fullName}</h1>
                     <ProfileStatusHook status={props.status} updateStatus={props.updateStatus} isOwner={props.isOwner} />
                 </div>
-            </div>
-            <div>
-                {props.isOwner && <input type={"file"} name={"myfile"} onChange={onChangeMainFoto} />}
             </div>
             {editMode
                 ? <ProfileDataForm initialValues={props.profile} profile={props.profile} onSubmit={onSubmit} />
