@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/Settings/Settings.module.css"],"names":[],"mappings":"AAAA,yBACG,WAAY,CACZ,UAAY,CACZ,cACH","file":"11.b38b8965.chunk.css","sourcesContent":[".content {\r\n   margin: 20px;\r\n   color: white;\r\n   font-size: 20px;\r\n}"]}

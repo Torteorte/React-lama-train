@@ -1,2 +1,0 @@
-(this.webpackJsonplama=this.webpackJsonplama||[]).push([[9],{310:function(n,t,a){},315:function(n,t,a){"use strict";a.r(t);a(0);var c=a(310),s=a.n(c),e=a(2);t.default=function(){return Object(e.jsx)("div",{className:s.a.content,children:"Music"})}}}]);
-//# sourceMappingURL=9.55a765d1.chunk.js.map

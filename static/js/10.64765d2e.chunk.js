@@ -1,0 +1,2 @@
+(this.webpackJsonplama=this.webpackJsonplama||[]).push([[10],{316:function(n,t,e){n.exports={content:"News_content__1Jntn"}},321:function(n,t,e){"use strict";e.r(t);e(0);var s=e(316),a=e.n(s),c=e(1);t.default=function(){return Object(c.jsx)("div",{className:a.a.content,children:"News next season"})}}}]);
+//# sourceMappingURL=10.64765d2e.chunk.js.map
