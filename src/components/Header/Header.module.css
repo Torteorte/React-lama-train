@@ -1,3 +1,9 @@
+.preloaderProfile {
+    position: absolute;
+    top: 0;
+    transform: scale(0.5);
+}
+
 .header {
     display: grid;
     grid-area: h;
@@ -55,14 +61,16 @@
     border: 1px solid white
 }
 
+.logOut a {
+    text-decoration: none;
+}
+
 .logOut .loginSmallInfo {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 5px 15px;
-    border-radius: 20px;
     color: rgb(45, 136, 255);
-    background-color: rgba(56, 94, 152, 0.171);
 }
 
 .logOut button {

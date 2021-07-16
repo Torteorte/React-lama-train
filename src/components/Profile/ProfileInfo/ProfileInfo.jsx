@@ -44,7 +44,7 @@ const ProfileInfo = (props) => {
                 <div >
                     {props.isOwner && <div>
                         <input className={styles.inputAvatar} type={"file"} name={"myfile"} onChange={onChangeMainFoto} id="avatarFile" />
-                        <label for="avatarFile" className={styles.avatarFileInput}>
+                        <label htmlFor="avatarFile" className={styles.avatarFileInput}>
                             <img src={uploadImage} alt="avatar" />
                         </label>
                     </div>}
@@ -67,23 +67,23 @@ const ProfileData = (props) => {
     return (
         <div className={styles.personInfo}>
 
-            <b>About me: </b>
+            <b>Краткая информация: </b>
             <div className={styles.aboutMe}>
                 {props.profile.aboutMe}
             </div>
             <div>
-                <b>Looking for a job:</b> {props.profile.lookingForAJob ? "yes" : "no"}
+                <b>Поиск работы:</b> {props.profile.lookingForAJob ? "да" : "нет"}
             </div>
             {props.profile.lookingForAJob &&
                 <div>
-                    <b>My professional skills:</b> {props.profile.lookingForAJobDescription}
+                    <b>Мои профессиональные навыки:</b> {props.profile.lookingForAJobDescription}
                 </div>
             }
             <div>
-                <b>Contacts:</b>
+                <b>Контакты:</b>
                 <Contacts contacts={props.profile.contacts} />
             </div>
-            {props.isOwner && <div className={styles.Edit}><ButtonGrey onClick={props.goToEditMode} textButton="Edit" /></div>}
+            {props.isOwner && <div className={styles.Edit}> <img src="https://img.icons8.com/ios/100/000000/pencil--v1.png" alt="edit" /> <ButtonGrey onClick={props.goToEditMode} textButton="Редактировать профиль" /></div>}
         </div>
     )
 }

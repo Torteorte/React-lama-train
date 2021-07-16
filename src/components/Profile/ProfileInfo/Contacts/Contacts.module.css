@@ -7,5 +7,10 @@
 .contacts img {
    width: 50px;
    height: 50px;
-   margin: 10px;
+   margin: 20px;
+   transition: 0.3s;
+}
+
+.contacts img:hover {
+   transform: scale(1.1);
 }

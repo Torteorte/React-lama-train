@@ -1,0 +1,81 @@
+.formInfo {
+   color: whitesmoke;
+   font-size: 20px;
+   margin: 20px;
+}
+
+.formInfo h2 {
+   text-align: center;
+}
+
+.formInfo div {
+   margin: 10px;
+}
+
+.formInfo .formItem {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.formInfo b {
+   min-width: 125px;
+}
+
+.formInfo input, .formInfo textarea {
+   padding: 10px 15px;
+   font-size: 16px;
+   outline: none;
+   background-color: rgba(189, 189, 189, 0.2);
+   border: solid 1px darkgrey;
+   border-radius: 5px;
+   color: white;
+   transition: 0.1s;
+}
+
+.formInfo input:focus {
+   background-color: rgba(148, 148, 148, 0.2);
+   border: solid 1px white;
+}
+
+.formInfo input[type="checkbox"] {
+   margin-left: 15px;
+   margin-right: 5px
+}
+
+.formInfo .checkBox {
+   color: rgb(32, 182, 32);
+}
+
+.contactsItems {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.contactsItems b {
+   min-width: 95px;
+}
+
+.contactsItems .formItem {
+   margin-top: 0px;
+   margin-bottom: 0px
+}
+
+.formInfo button {
+   margin-top: 20px;
+   padding: 10px 15px;
+   border-radius: 10px;
+   background-color: rgb(109, 109, 109);
+   color: white;
+   font-size: 18px;
+}
+
+.buttonSave {
+   text-align: center;
+}
+
+.formSummaryError {
+   border: red 1px solid;
+   padding: 5px;
+   color: red;
+}

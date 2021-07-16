@@ -8,7 +8,7 @@ import Preloader from '../common/Preloader/Preloader';
 
 const Header = (props) => {
 
-    if (!props.profile) {
+    if (!props.profile && props.authorizedUserId) {
         return (
             <div className={styles.preloaderProfile}>
                 <Preloader />
@@ -25,10 +25,10 @@ const Header = (props) => {
             <div className={styles.loginLink}>
                 {props.isAuth
                     ? <div className={styles.logOut}>
-                        <div className={styles.loginSmallInfo}>
+                        <NavLink className={styles.loginSmallInfo} to={'/profile'}>
                             <img src={props.profile.photos.large || userDefaultPhoto} alt="Avatar" />
                             <div>{props.login}</div>
-                        </div>
+                        </NavLink>
                         <ButtonGrey onClick={props.logout} textButton="Log out" />
                     </div>
                     : <NavLink to={'/login'}>Login</NavLink>}

@@ -102,7 +102,7 @@ export const saveProfile = (profile) => async (dispatch, getState) => {
             response.data.messages[0].indexOf(")")
          )
          .toLocaleLowerCase();
-      dispatch(stopSubmit("editProfile", { contacts: { [wrongNetwork]: `Invalid URL of ${wrongNetwork}` } })
+      dispatch(stopSubmit("editProfile", { contacts: { [wrongNetwork]: `Invalid URL` } })
       );
       return Promise.reject(response.data.messages[0]);
    }
